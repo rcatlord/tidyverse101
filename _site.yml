@@ -1,0 +1,43 @@
+name: "tidyverse101"
+title: "tidyverse101"
+description: |
+  tidyverse101
+output_dir: "docs"
+creative_commons: CC BY-SA
+favicon: images/favicon.ico
+navbar:
+  logo:
+    image: images/logo.png
+    href: https://www.trafforddatalab.io
+  right:
+    - text: "Admin"
+      href: admin.html
+    - text: "Setup"
+      href:  setup.html
+    - text: "Modules"
+      menu:
+        - text: "Hello R!"
+          href: helloR.html
+        - text: "Import"
+          href: 404.html
+        - text: "Tidy"
+          href: 404.html
+        - text: "Transform"
+          href: 404.html
+        - text: "Visualise"
+          href: 404.html
+        - text: "Model"
+          href: 404.html
+        - text: "Communicate"
+          href: 404.html
+        - text: "Program"
+          href: 404.html
+    - text: "Project"
+      href: 404.html
+    - text: "Resources"
+      href: resources.html
+    - icon: fab fa-github
+      href: https://github.com/trafforddatalab
+output:
+  distill::distill_article:
+    css: styles.css

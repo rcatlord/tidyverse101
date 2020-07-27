@@ -1,0 +1,57 @@
+/* typeface and fonts */ 
+@import url(https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Inconsolata);
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #212121;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  color: #046dc3;
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.remark-code, .remark-inline-code {
+  font-family: "Inconsolata", monospace;
+}
+
+/* slide colours */ 
+.inverse {
+  background-color: #5d77a3;
+  border: none;
+  font-color: #fff;
+  text-shadow: none;
+}
+
+.inverse, .inverse h1, .inverse h2, .inverse a {
+  color: #fff;
+}
+
+.inverse h3 {
+  color: #000;
+}
+
+/* reduce gap between title rows */ 
+.title-slide h1 {
+  line-height: 0.1em;
+}
+  
+/* change subtitle colour */ 
+.title-slide h2 {
+  color: #212121; 
+  line-height: 3.0em;
+}
+  
+/* hide the number from title slide */ 
+.title-slide .remark-slide-number {
+  display: none;
+}

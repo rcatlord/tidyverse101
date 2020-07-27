@@ -1,0 +1,27 @@
+---
+title: "Hello R!"
+output: distill::distill_article
+---
+
+### Outline
+
+- the RStudio interface
+- functions and objects
+- vectors, lists and data frames
+- data types
+- R packages
+
+### Slides
+
+```{r echo = FALSE}
+knitr::include_url("slides/helloR/index.html")
+```
+or view full screen <a href="slides/helloR/index.html" target="_blank">here</a>
+
+### Quiz
+
+### Lab
+
+### Further reading
+
+- R for Data Science: <a href="https://r4ds.had.co.nz/vectors.html" target="_blank">Chapter 20: Vectors</a>

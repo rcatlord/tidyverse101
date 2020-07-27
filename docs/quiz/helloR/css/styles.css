@@ -1,0 +1,21 @@
+html, body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14;
+  color: #212121;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+  color: #212121;
+}
+
+.topicsList .topic {
+  cursor: pointer;
+  padding-left: 10px;
+}
+
+.topicsList .topic.current {
+  background-color: #5d77a3;
+  color: #FFFFFF;
+  border: 0px;
+}

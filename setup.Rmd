@@ -1,0 +1,35 @@
+---
+title: "Setup"
+description: |
+  What you need to get ready for the course
+---
+
+To prepare for the sessions please bring a laptop that has the following installed:
+
+- A recent version of **R**, which can be downloaded from <a href="https://cran.r-project.org" target="_blank">cran.r-project.org</a>. This is important because some R packages used during the course may not install correctly if R is not up to date.
+- A recent version of **RStudio Desktop**, available from <a href="https://rstudio.com/products/rstudio/download/" target="_blank">rstudio.com/download</a>. RStudio is a free and open-source integrated development environment (IDE) for R.
+
+To test whether the installation was successful try copying and pasting the R code below into <a href="images/rstudio_console.png" target="_blank">RStudio's console pane</a>.
+
+```{r, echo=TRUE, eval=FALSE}
+install.packages("tidyverse")
+library(tidyverse)
+ggplot(starwars, aes(x = height, y = mass)) +
+  geom_point() +
+  labs(x = "Height (cm)", y = "Weight (kg)",
+       title = "Mass vs. height of Starwars characters")
+```
+
+Then highlight the code and click Run. 
+
+The installation was successful if the plot below appears in the output pane of RStudio.
+
+```{r, layout="l-body"}
+library(tidyverse)
+ggplot(starwars, aes(x = height, y = mass)) +
+  geom_point() +
+  labs(x = "Height (cm)", y = "Weight (kg)",
+       title = "Mass vs. height of Starwars characters")
+```
+
+If you have any problems please contact us on the Slack workspace. 

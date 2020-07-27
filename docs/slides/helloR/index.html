@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Hello R!</title>
+    <meta charset="utf-8" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# <div class="line-block">tidyverse101<br />
+an introductory data science course in R</div>
+## Hello R!
+
+---
+
+
+
+
+class: inverse, middle, center
+# R
+
+---
+## What is R?
+
+R is an open source programming language for statistical analysis and data visualisation. It was developed by Ross Ihaka and Robert Gentleman of the University of Auckland and released in 1995. There are now over 16,000 [packages available for R](https://cran.r-project.org/web/packages) which provide functions for machine learning, genomics, time series forecasting, and interactive graphics amongst many others. 
+
+R is widely used in academia and rapidly [replacing SPSS](https://datahowler.wordpress.com/2016/09/10/no-more-excuses-r-is-better-than-spss-for-psychology-undergrads-and-students-agree/) and other proprietary statistical software in undergraduate programmes. It is also used by well known companies like [Google](https://ai.google/research/pubs/pub37483), [Netflix](https://www.youtube.com/watch?v=dLKky1xIxtc) and [Airbnb](https://peerj.com/preprints/3182.pdf) for data analytics. Many graphics published by news outlets like the [Financial Times](https://johnburnmurdoch.github.io/slides/r-ggplot/#/) and the [BBC](https://medium.com/bbc-visual-and-data-journalism/how-the-bbc-visual-and-data-journalism-team-works-with-graphics-in-r-ed0b35693535) are  generated in R. The UK Government is also embracing R to help make their [statistical reporting](https://dataingovernment.blog.gov.uk/2017/11/27/transforming-the-process-of-producing-official-statistics/) workflow more efficient and [reproducible](https://dataingovernment.blog.gov.uk/2017/03/27/reproducible-analytical-pipeline/).
+
+---
+## Why use R?
+
+- free
+- open source
+- advanced statistical analysis
+- publication ready graphics
+- increasingly used to support undergraduate teaching of statistics
+- programming skills are attractive to employers
+
+---
+## Why use R?
+Since R is a language it is also:
+
+- open
+- shareable
+- reproducibile
+- human readable
+- [diffable](https://en.wiktionary.org/wiki/diffable)
+
+and therefore supports the principles of open science.
+
+---
+class: inverse, middle, center
+# RStudio
+
+---
+## RStudio's panes
+
+&lt;img src="images/rstudio_panes.png" width="1707" style="display: block; margin: auto;" /&gt;
+
+---
+## Console and source panes
+
+.pull-left[
+&lt;img src="images/rstudio_console.png" /&gt;
+The **Console** pane is used to execute R commands immediately.
+]
+
+.pull-right[
+&lt;img src="images/rstudio_source.png" /&gt;
+The **Source** pane appears when you open a new file e.g. *File -&gt; New File -&gt; R Script*. Code can be saved in dedicated .R scripts and executed in the console with Ctrl-Enter/Cmd-Enter. Syntax highlighting and tab completion are also available.
+]
+
+---
+## Environment and files panes
+
+.pull-left[
+&lt;img src="images/rstudio_environment.png" /&gt;
+The **Environment** pane shows the datasets, models, and plots that are loaded in the current R session. This pane also contains tabs with a scrollable history of executed code, connections to databases and Git options.
+]
+
+.pull-right[
+&lt;img src="images/rstudio_files.png" /&gt;
+The **Files** pane shows plots and interactive web content, help documentation, previous commands, and R packages that you can install and load.
+]
+
+---
+## Customisation
+
+The appearance of RStudio can be changed to suit you.
+
+- Increase the font size: *Tools &gt; Global Options &gt; Appearance &gt; Editor Font size*
+- Move the Console pane to the right: *View &gt; Panes &gt; Console on Right*
+- Add a margin column line: *Tools &gt; Global Options &gt; Code &gt; Display &gt; Show margin*
+- Automatic text wrapping: *Tools &gt; Global Options &gt; Code &gt; Editing &gt; Soft-wrap R source files*
+
+You can also change RStudio's overall theme. Opting for a dark theme reduces the amount of glare that your eyes are subject to. Change the global theme to Dark by selecting 'Appearance' in the *Global Options* menu and opt for an Editor theme with a dark palette such as 'Material'.
+
+---
+## Keyboard shortcuts
+
+RStudio has many useful shortcuts that enable you to keep your hands on the keyboard thereby boosting your coding productivity. For example,
+
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Shortcut &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Action &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Ctrl/Cmd + Enter &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Run your selected code in the Console &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Ctrl/Cmd + Shift + M &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Add piping operator &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Ctrl/Cmd + L &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Clear the console window &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Ctrl/Cmd + Shift + R &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Add a section break &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Shift + Ctrl/Cmd + 1 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Make the console full screen &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Ctrl/Cmd + Shift + A &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Format your code &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+For a complete list of all available shortcuts just type: `Alt + Shift + K`
+
+---
+class: inverse, middle, center
+# R essentials
+
+---
+## Functions
+A function is a block of reusable code that performs an action. Functions can be built-in or user-defined.
+
+To see the underlying source code behind a function just run the function name.
+
+
+```r
+sqrt
+```
+
+```
+## function (x)  .Primitive("sqrt")
+```
+
+Each function has one or more argument. Values are supplied to the arguments in parentheses behind the function name. For example, the function `sqrt()` takes one or more numeric values and returns the square root.
+
+
+```r
+sqrt(9)
+```
+
+```
+## [1] 3
+```
+
+---
+## Objects
+An object stores information like values, model coefficients, and plots in your R session.
+
+Objects are created by assigning values to a name using the `&lt;-` operator. 
+
+
+```r
+x &lt;- 101
+x
+```
+
+```
+## [1] 101
+```
+
+Object names cannot start with numbers or special characters (e.g. ? % ^) and R will overwrite an object if you assign new values to it.
+
+You can remove an object from your R session using the `rm()` function.
+
+
+```r
+rm(x)
+```
+
+---
+## Vectors
+A vector is a simple one-dimensional structure that can contain only one type of value.
+
+You can combine values into a vector using the `c()` function.
+
+
+```r
+x &lt;- c(11, 19, 13, 16, 12, 12, 18, 14, 20, NA)
+x
+```
+
+```
+##  [1] 11 19 13 16 12 12 18 14 20 NA
+```
+
+We can apply functions to that vector.
+
+
+```r
+mean(x, na.rm = TRUE)
+```
+
+```
+## [1] 15
+```
+
+You can extract a value from a vector by indexing its position.
+
+
+```r
+x[3]
+```
+
+```
+## [1] 13
+```
+
+---
+## Data types
+
+.pull-left[
+R supports a number of data types including: 
+
+- **integer**: whole numbers 
+- **double**: decimal numbers
+- **character**: strings
+- **logical**: Boolean values
+]
+
+.pull-right[
+
+```r
+typeof(5L)
+```
+
+```
+## [1] "integer"
+```
+
+```r
+typeof(5.5)
+```
+
+```
+## [1] "double"
+```
+
+```r
+typeof("spaghetti")
+```
+
+```
+## [1] "character"
+```
+
+```r
+typeof(TRUE)
+```
+
+```
+## [1] "logical"
+```
+]
+
+---
+## Lists
+Lists can store vectors of different lengths with different data types.
+
+
+```r
+x &lt;- list(1:10, c("Good", "Bad", "Ugly"), TRUE)
+str(x)
+```
+
+```
+## List of 3
+##  $ : int [1:10] 1 2 3 4 5 6 7 8 9 10
+##  $ : chr [1:3] "Good" "Bad" "Ugly"
+##  $ : logi TRUE
+```
+
+Names can be assigned to each element in a list to aid subsetting.
+
+```r
+x &lt;- list(numbers = 1:10, strings = c("Good", "Bad", "Ugly"), boolean = TRUE)
+x$strings
+```
+
+```
+## [1] "Good" "Bad"  "Ugly"
+```
+
+---
+## Data frames
+Data frames store multiple vectors of the same length with different data types.
+
+
+```r
+film &lt;- c("A Fistful of Dollars", "For a Few Dollars More", "The Good, The Bad and The Ugly")
+year &lt;- c(1964, 1965, 1966)
+budget &lt;- c(200000, 600000, 1200000)
+data.frame(film, year, budget)
+```
+
+```
+##                             film year  budget
+## 1           A Fistful of Dollars 1964  200000
+## 2         For a Few Dollars More 1965  600000
+## 3 The Good, The Bad and The Ugly 1966 1200000
+```
+
+---
+## Packages
+Packages are collections of R functions and data. There are [over 16,000 user-contributed packages](https://cran.r-project.org/web/packages) available to install from CRAN. 
+
+Just type `install.packages()` in the console with the name of the package in inverted commas:
+
+
+```r
+install.packages("tidyverse")
+```
+
+Once installed you can load the package using the `library()` function like this:
+
+
+```r
+library(tidyverse)
+```
+
+---
+## Finding help
+You can find help within R using the `?` function. For example, if you want to learn more about a function just place a ? before the function name. 
+
+For example, if you wanted to read up on the `sqrt()` function you'd enter:
+
+
+```r
+?sqrt
+```
+
+You can also use the `help()` function:
+
+
+```r
+help(sqrt)
+```
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

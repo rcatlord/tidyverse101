@@ -1,0 +1,52 @@
+---
+title: "Admin"
+description: |
+  How we plan to run the sessions and the materials you'll need
+---
+
+### Session Plan
+Morning and afternoon sessions will start on dd-mm-yy and repeat over x weeks.
+
+- **Recap**: we will start each session with a brief discussion about what we learnt during the previous session. This will be an opportunity to ask questions and revisit topics.
+- **Slides**: each stage of the data science workflow will be introduced with explicit reference to the tidyverse packages
+- **Quiz**: a short quiz will help reinforce the concepts presented in the slides
+- **Lab**: this will be a self-directed exercise involving the exploration of open government data and / or background reading
+- **Project**: this will be an ongoing task that applies your data science skills to a real world problem
+
+### Schedule
+
+```{r, layout="l-body"}
+library(tidyverse) ; library(reactable)
+data <- tribble(
+  ~Period, ~Session, ~Activity, ~Format,
+  "09:30-09:45", "Morning", "Recap", "Microsoft Teams", 
+  "09:45-10:45", "Morning", "Slides", "Microsoft Teams", 
+  "10:45-11:00", "Morning", "Break", "", 
+  "11:00-11:15", "Morning", "Quiz", "Slack", 
+  "11:15-12:00", "Morning", "Lab", "Slack", 
+  "12:00-13:00", "Midday", "Lunch", "", 
+  "13:00-13:15", "Afternoon", "Recap", "Microsoft Teams", 
+  "13:15-14:15", "Afternoon", "Slides", "Microsoft Teams", 
+  "14:15-14:30", "Afternoon", "Break", "", 
+  "14:30-14:45", "Afternoon", "Quiz", "Slack", 
+  "14:45-15:00", "Afternoon", "Lab", "Slack", 
+  "15:00-15:15", "Afternoon", "Break", "",
+  "15:15-16:00", "Afternoon", "Project", "Slack")
+
+reactable(
+  data,
+  groupBy = "Session",
+  columns = list(
+    Session = colDef(),
+    Period = colDef(),
+    Activity = colDef(),
+    Format = colDef()
+    )
+)
+```
+
+### Course materials
+Slides, quizes and labs will be uploaded to this website as the course progresses. We will be referring to the book <a href="https://r4ds.had.co.nz" target="_blank">R for Data Science</a> by Hadley Wickham and Garret Grolemund throughout the course.
+
+### Help
+The <a href="https://www.trafforddatalab.io/about.html" target="_blank">Trafford Data Lab</a> team will be available on the Slack workspace to offer help and support. You can also post questions on Slack outside teaching hours but we may be a little slower to reply.

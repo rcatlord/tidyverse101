@@ -1,0 +1,11 @@
+---
+title: "tidyverse101"
+description: |
+  An introductory data science course in R
+site: distill::distill_website
+---
+
+```{r fig.cap="Image adapted from https://knowyourmeme.com/photos/502414-dwarf-fortress"}
+knitr::include_graphics("images/learning_curves.png")
+```
+

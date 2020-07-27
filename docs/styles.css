@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans%7CRoboto');
+
+html, body {
+  font-family: 'Open Sans', sans-serif;
+  color: #212121;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+  line-height: 2rem;
+}
+
+.distill-site-nav {
+  color: #212121;
+  background-color: #5d77a3;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.distill-site-nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.distill-site-nav a:hover {
+  color: white;
+}
+
+.distill-site-header {
+}
+
+.distill-site-header .logo img{
+  max-height: 25px; /* Increase logo size */
+}
+
+.distill-site-footer {
+}
+
+@media print {
+  .distill-site-nav {
+    display: none;
+  }
+}
