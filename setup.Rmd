@@ -1,5 +1,6 @@
 ---
 title: "Setup"
+lang: "en-GB"
 description: |
   What you need to get ready for the course
 ---

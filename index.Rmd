@@ -1,5 +1,6 @@
 ---
 title: "tidyverse101"
+lang: "en-GB"
 description: |
   An introductory data science course in R
 site: distill::distill_website

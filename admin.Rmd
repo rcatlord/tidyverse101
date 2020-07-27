@@ -1,10 +1,11 @@
 ---
 title: "Admin"
+lang: "en-GB"
 description: |
   How we plan to run the sessions and the materials you'll need
 ---
 
-### Session Plan
+## Session Plan
 Morning and afternoon sessions will start on dd-mm-yy and repeat over x weeks.
 
 - **Recap**: we will start each session with a brief discussion about what we learnt during the previous session. This will be an opportunity to ask questions and revisit topics.
@@ -13,7 +14,7 @@ Morning and afternoon sessions will start on dd-mm-yy and repeat over x weeks.
 - **Lab**: this will be a self-directed exercise involving the exploration of open government data and / or background reading
 - **Project**: this will be an ongoing task that applies your data science skills to a real world problem
 
-### Schedule
+## Schedule
 
 ```{r, layout="l-body"}
 library(tidyverse) ; library(reactable)
@@ -45,8 +46,8 @@ reactable(
 )
 ```
 
-### Course materials
+## Course materials
 Slides, quizzes and labs will be uploaded to this website as the course progresses. We will be referring to the book <a href="https://r4ds.had.co.nz" target="_blank">R for Data Science</a> by Hadley Wickham and Garret Grolemund throughout the course.
 
-### Help
+## Help
 The <a href="https://www.trafforddatalab.io/about.html" target="_blank">Trafford Data Lab</a> team will be available on the Slack workspace to offer help and support. You can also post questions on Slack outside teaching hours but we may be a little slower to reply.
