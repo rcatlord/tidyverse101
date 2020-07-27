@@ -1,35 +1,36 @@
 ---
 title: "Resources"
+lang: "en-GB"
 description: |
   The following is a list of online resources that you might find useful
 ---
 
-<h3>Online books</h3>
+<h2>Online books</h2>
   <ul>
     <li><a href="https://r4ds.had.co.nz" target="_blank">R for Data Science</a></li>
-    <li><a href="https://rstudio-education.github.io/hopr/" target="_blank">Happy Git and GitHub for the useR</a></li>
-    <li><a href="https://happygitwithr.com" target="_blank">Geocomputation with R</a></li>
+    <li><a href="https://rstudio-education.github.io/hopr/" target="_blank">Hands-On Programming with R</a></li>
+    <li><a href="https://happygitwithr.com" target="_blank">Happy Git and GitHub for the useR</a></li>
     <li><a href="https://www.tidytextmining.com" target="_blank">Text Mining with R: A Tidy Approach</a></li>
     <li><a href="https://geocompr.robinlovelace.net" target="_blank">Geocomputation with R</a></li>
   </ul>
-<h3>Style guides</h3>
+<h2>Style guides</h2>
   <ul>
     <li><a href="https://style.tidyverse.org" target="_blank">The tidyverse style guide</a></li>
     <li><a href="https://google.github.io/styleguide/Rguide.html" target="_blank">Google’s R Style Guide</a></li>
   </ul>
-<h3>Blogs</h3>
+<h2>Blogs</h2>
   <ul>
     <li><a href="https://rweekly.org" target="_blank">R Weekly</a></li>
     <li><a href="https://blog.rstudio.com" target="_blank">RStudio Blog</a></li>
     <li><a href="https://rviews.rstudio.com" target="_blank">R Views</a></li>
   </ul>
-<h3>Communities</h3>
+<h2>Communities</h2>
   <ul>
     <li><a href="https://www.rmanchester.org" target="_blank">Manchester R</a></li>
     <li><a href="https://community.rstudio.com" target="_blank">RStudio Community</a></li>
     <li><a href="https://rladies.org" target="_blank">R-Ladies</a></li>
   </ul>
-<h3>Help</h3>
+<h2>Help</h2>
   <ul>
     <li><a href="https://rstudio.cloud/learn/cheat-sheets" target="_blank">RStudio Cheatsheets</a></li>
     <li><a href="https://stackoverflow.com/questions/tagged/r" target="_blank">StackOverflow</a></li>
