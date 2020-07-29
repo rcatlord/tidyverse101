@@ -1,4 +1,11 @@
 ---
-title: "Page under construction"
+title: "#TODO: create page"
+description: |
+  Sorry this page isn't ready yet, but it's on the list!
 lang: "en-GB"
 ---
+<span class="fas fa-keyboard fa-6x" style="vertical-align: middle;"></span>
+<span class="fas fa-chevron-right fa-2x" style="padding-left: 25px; padding-right: 25px; vertical-align: middle;"></span>
+<span class="fas fa-code fa-6x" style="vertical-align: middle;"></span>
+<span class="fas fa-chevron-right fa-2x" style="padding-left: 25px; padding-right: 25px; vertical-align: middle;"></span>
+<span class="fas fa-code-branch fa-6x" style="vertical-align: middle;"></span>
