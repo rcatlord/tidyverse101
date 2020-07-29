@@ -10,8 +10,22 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 2rem;
 }
 
+/*
+  Heading styles need to be qualified by the d-article tag they are within.
+  Also, these are for smaller screen sizes - media rules at the end increase the size for bigger screens
+*/
+d-article h2 {
+  font-size: 20px;
+  border-bottom: 0;
+  margin-bottom: 0;
+}
+
+d-article h3 {
+  font-size: 16px;
+}
+
 .distill-site-nav {
-  color: #212121;
+  color: #fff;
   background-color: #5d77a3;
   font-size: 15px;
   font-weight: 400;
@@ -23,7 +37,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .distill-site-nav a:hover {
-  color: white;
+  text-decoration: underline;
+}
+
+.nav-dropdown-content a {
+  color: #046dc3;
 }
 
 .distill-site-header {
@@ -39,5 +57,15 @@ h1, h2, h3, h4, h5, h6 {
 @media print {
   .distill-site-nav {
     display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  d-article h2 {
+    font-size: 22px;
+  }
+  
+  d-article h3 {
+    font-size: 18px;
   }
 }
